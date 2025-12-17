@@ -1,4 +1,30 @@
-const sumAll = function() {
+const sumAll = function(min,max) {
+
+    if(!Number.isInteger(min) || !Number.isInteger(max))
+    {
+        return "ERROR";
+    }
+
+    if(min > max)
+    {
+        let tmpMax = min;
+        min = max;
+        max = tmpMax;
+    }
+
+    if(min < 0 || max < 0)
+    {
+        return "ERROR"
+    }
+
+    let sum = 0
+
+    for(i=min;i<=max;i++)
+    {
+        sum +=i;
+    }
+
+    return sum;
 
 };
 
